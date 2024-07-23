@@ -6,7 +6,7 @@ from datetime import datetime
 import json
 
 PORT = [port_info.device for port_info in list_ports.comports() if 'arduino' in port_info.description.lower()][0]
-print('Using port ', PORT)
+print('Using port', PORT)
 
 Path('data').mkdir(parents=True, exist_ok=True)
 path = Path('data/data.json')
