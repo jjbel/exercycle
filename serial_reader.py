@@ -41,8 +41,16 @@ fix_today()
 
 with Serial(port=PORT, baudrate=9600, timeout=1) as serial:
     while True:
-        output = serial.readline().decode('ascii').strip().split(',')
-        if len(output) != 2:
-            continue
-        count, speed = output
-        update(count, speed)
+        try:
+            output = serial.readline().decode('ascii').strip().split(',')
+            if len(output) != 2:
+                continue
+            count, speed = output
+            update(count, speed)
+        except KeyboardInterrupt:
+            print('Exiting.')
+            break
+
+        # Some funny business
+        # exit printed right after "Started webserver"
+        # also probably asks again for killing npm

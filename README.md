@@ -1,5 +1,13 @@
 # Exercycle App
 
+In the root directory of the project: simply run:
+
+```sh
+python run.py
+```
+
+---
+
 This is the app-portion of my DIY exercycle project.
 
 The website displays count, speed and history in realtime.
@@ -22,3 +30,5 @@ Uses:
 
 1. [Reading COM port from windows terminal](https://stackoverflow.com/a/3924069)
 2. [Debugging "access denied to port"](https://stackoverflow.com/questions/1153547/access-to-the-port-com1-is-denied)
+3. [python Popen runs in background](https://stackoverflow.com/a/7224186)
+4. [Killing a process on windows](https://stackoverflow.com/a/73528296)
