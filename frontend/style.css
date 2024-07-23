@@ -43,23 +43,22 @@ body {
 
 #history {
   position: fixed;
-  top: 35vh;
-  left: 7.5vw;
+  top: 25vh;
+  left: 7vw;
+  font-size: 1.4em;
 }
 
 #history h2 {
-  font-size: 2em;
-  margin: 0.3em;
+  font-size: 1.8em;
+  margin: 0.1em;
+  text-align: center;
 }
 
-#history ul {
-  list-style-type: none;
-  padding: 0;
+#history-data {
+  border-spacing: 0.2em 0.5em;
 }
-
-#history li {
-  font-size: 1.3em;
-  margin: 0.3em 0;
+#history-data tr td:nth-child(3) {
+  text-align: right;
 }
 
 @media (max-aspect-ratio: 1/1) {

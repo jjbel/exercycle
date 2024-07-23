@@ -24,12 +24,13 @@ class Data {
 
     const day = (date) => {
       //   TODO do with dayjs?? weekday plugin?
+      //   TODO but if days aren't last 7 then days will repeat
       const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
       return DAYS[dayjs(date, "YYYY-MM-DD").day()];
     };
 
     const li = (date, count) => {
-      return `<li>${day(date)}: ${count}</li>\n`;
+      return `<tr><td>${day(date)}</td> <td>:</td>  <td>${count}</td></tr>\n`;
     };
 
     const dates = Object.keys(this.data.history).toSorted().slice(0, 7);
@@ -41,7 +42,7 @@ class Data {
     }
     console.log(str);
 
-    document.getElementById("history-ul").innerHTML = str;
+    document.getElementById("history-data").innerHTML = str;
   }
 
   async update() {
