@@ -1,5 +1,10 @@
 # Exercycle App
 
+<!-- Tokei not workig, see https://github.com/badges/shields/issues/7569 -->
+<!-- filter=.py$,.js$,.css$,.html$,.ino$& -->
+![Lines of Code](https://img.shields.io/endpoint?url=https://ghloc.vercel.app/api/jjbel/exercycle/badge?filter=.py$,.html$,.css$,.js$,.ino$&style=flat&logoColor=red&label=Lines%20of%20Code&color=red)
+![Repo Size](https://img.shields.io/github/repo-size/jjbel/exercycle)
+
 In the root directory of the project, simply run:
 
 ```sh
