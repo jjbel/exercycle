@@ -10,5 +10,4 @@ setInterval(() => {
 }, 1000);
 
 data = new Data();
-// setInterval(data.update, 1000);
-data.update()
+setInterval(() => data.update(), 1000);

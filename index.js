@@ -1,11 +1,11 @@
 const express = require("express");
-const path = require('path')
+const { resolve } = require("path");
 
-const app = express()
+const app = express();
 
-app.use(express.static(path.join(__dirname, 'public')))
-app.get('/data', (req, res) => {
-    res.sendFile(path.join(__dirname, 'data', 'data.json'))
-})
+app.use(express.static(resolve("public")));
+app.get("/data", (req, res) => {
+  res.sendFile(resolve("data/data.json"));
+});
 
-app.listen(5000, () => console.log(`Server started.`))
+app.listen(5000, () => console.log(`Server started.`));
