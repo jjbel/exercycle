@@ -39,8 +39,6 @@ def update(count, speed):
 
 fix_today()
 
-update(6969, 69.0)
-
 with Serial(port=PORT, baudrate=9600, timeout=1) as serial:
     while True:
         output = serial.readline().decode('ascii').strip().split(',')
@@ -48,5 +46,3 @@ with Serial(port=PORT, baudrate=9600, timeout=1) as serial:
             continue
         count, speed = output
         update(count, speed)
-        # print(output)
-        # print(path.read_text())
