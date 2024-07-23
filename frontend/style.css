@@ -9,11 +9,14 @@ body {
   color: white;
 }
 
-#main {
-  font-size: 4.5em;
-  font-weight: 500;
-  /* background-color: red; */
+#count-data,
+#speed-data {
+  text-shadow: rgb(101, 147, 255) 0 0 0.13em;
+}
 
+#main {
+  font-weight: 500;
+  font-size: 4.5em;
   position: fixed;
   inset: 0;
   width: 6em;
@@ -21,4 +24,50 @@ body {
   max-width: 100vw;
   max-height: 100dvh;
   margin: auto;
+}
+
+#date,
+#time {
+  font-size: 2.7em;
+  position: fixed;
+  top: 9vh;
+}
+
+#date {
+  left: 18vw;
+}
+#time {
+  right: 18vw;
+  width: 4em; /* to prevent seconds flickering width */
+}
+
+#history {
+  position: fixed;
+  top: 35vh;
+  left: 7.5vw;
+}
+
+#history h2 {
+  font-size: 2em;
+  margin: 0.3em;
+}
+
+#history ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#history li {
+  font-size: 1.3em;
+  margin: 0.3em 0;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  #main {
+    font-size: 3.6em;
+  }
+
+  #date {
+    /* TODO */
+  }
 }

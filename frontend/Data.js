@@ -3,6 +3,7 @@ class Data {
   static url = "/data";
 
   data = {};
+  init = false;
 
   async getData() {
     try {
@@ -18,8 +19,39 @@ class Data {
     }
   }
 
+  async update_history() {
+    console.log("Updating history");
+
+    const day = (date) => {
+      //   TODO do with dayjs?? weekday plugin?
+      const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+      return DAYS[dayjs(date, "YYYY-MM-DD").day()];
+    };
+
+    const li = (date, count) => {
+      return `<li>${day(date)}: ${count}</li>\n`;
+    };
+
+    const dates = Object.keys(this.data.history).toSorted().slice(0, 7);
+
+    let str = "";
+    for (const date of dates) {
+      str += li(date, this.data.history[date]);
+      console.log(date);
+    }
+    console.log(str);
+
+    document.getElementById("history-ul").innerHTML = str;
+  }
+
   async update() {
     await this.getData();
+
+    if (!this.init) {
+      await this.update_history();
+      this.init = true;
+    }
+
     document.getElementById("count-data").innerText = this.data["count"];
     document.getElementById("speed-data").innerText = this.data["speed"];
   }
