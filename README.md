@@ -1,6 +1,6 @@
 # Exercycle App
 
-In the root directory of the project: simply run:
+In the root directory of the project, simply run:
 
 ```sh
 python run.py
