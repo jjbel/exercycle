@@ -1,6 +1,8 @@
 # Exercycle App
 
-This is a website which displays count, speed and history for my exercycle in realtime.
+This is the app-portion of my DIY exercycle project.
+
+The website displays count, speed and history in realtime.
 
 Uses:
 
